@@ -1,26 +1,6 @@
-<h1>пульт управления</h1>
+<h2>list of products:</h2>
 
-<hr>
-<h2>одностороннее связывание</h2>
+<a class="product" *ngFor="let product of products; let i = index" [routerLink]="['/product', i]">
+	{{product}}({{i}})
+</a>
 
-<input type="text" [(ngModel)]="bind1">
-
-
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>

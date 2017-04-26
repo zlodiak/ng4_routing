@@ -12,4 +12,10 @@ export class Page1Component implements OnInit {
   ngOnInit() {
   }
 
+  products: string[] = [
+    'apples',
+    'oranges',
+    'bananas'
+  ];
+
 }

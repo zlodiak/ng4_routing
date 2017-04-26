@@ -13,6 +13,6 @@ export class Bind1Component implements OnInit {
   ngOnInit() {
   }
 
-  @Input() bind1 = 'test1';
+  name= "Евгений";
 
 }
