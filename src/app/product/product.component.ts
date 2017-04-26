@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductComponent implements OnInit, OnDestroy {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   private id;
   private sub;
@@ -16,11 +16,15 @@ export class ProductComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
        this.id = +params['id'];
-    });  
+    });
   }
 
 	ngOnDestroy() {
 		this.sub.unsubscribe();
 	}  
+
+  goBack () {
+    this.router.navigate(['/page1']);
+  }
 
 }

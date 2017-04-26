@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-page1',
@@ -7,15 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page1Component implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
   products: string[] = [
     'apples',
     'oranges',
     'bananas'
   ];
+
+ price = '100.45466';
+
+  constructor (private router: Router) {}
+
+  ngOnInit() {
+  }
+
+
 
 }

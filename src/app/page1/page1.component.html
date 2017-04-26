@@ -1,6 +1,11 @@
 <h2>list of products:</h2>
 
-<a class="product" *ngFor="let product of products; let i = index" [routerLink]="['/product', i]">
+<div class="product" *ngFor="let product of products; let i = index" [routerLink]="['/product', i]">
 	{{product}}({{i}})
-</a>
+</div>
 
+ <button (click)="onClick($event)">alert start</button>
+
+
+<hr>
+{{ price | addSigns:'==' }}
